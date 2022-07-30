@@ -16,6 +16,7 @@ a{
     padding: 0px 15px;
 }
 
+/*navbar*/
 nav{
     display: flex;
     align-items: center;
@@ -45,4 +46,46 @@ nav a:hover{
         width: 50%;
         text-align: center;
     }
+}
+
+/*body*/
+
+.titreprincipal{
+    padding: 0px 20px;
+}
+.titreprincipal{
+    font-size: small;
+}
+
+/*search-form*/
+
+.search-form{
+    display: flex;
+}
+
+.search-form i {
+    padding: 12px 12px;
+    background-color: rgb(238, 235, 235);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.search-form input {
+    padding-right: 30px;
+    border: 1px solid rgb(238, 235, 235);
+}
+
+.search-form input::placeholder{
+    color: black;
+    font-weight: bold;
+    padding: 0px 10px;
+}
+
+.search-form button{
+    padding: 0px 10px ;
+    background-color: #0065fc;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
 }
