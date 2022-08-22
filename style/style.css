@@ -242,7 +242,7 @@ nav a:hover{
     font-weight: bold;
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1024px){
      .search-form .search-icone {
         display: none;
     }
@@ -256,7 +256,7 @@ nav a:hover{
         margin: 30px 20px 15px;
     }
     .filter-list {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
     }
     .filter-list h1{
@@ -284,12 +284,12 @@ nav a:hover{
         width: auto;
         margin: 40px 90px 60px 40px;
         padding: 0;
-        height: 1000px;
+        height: auto;
     }
     .blocactivites{
         flex-direction: column;
         justify-content: space-between;
-        height: 930px;
+        height: auto;
     }
     .grandecarte{
         height: 442px;
@@ -302,14 +302,21 @@ nav a:hover{
         flex-direction: column;
         justify-content: space-between;
     }
-    .footer{
-        flex-direction: column;
+    .medium1 img, .medium2 img{
+        height: 180px;
+        object-fit: cover;    
+    }
+    .small1 img, .small2 img{
+        height: 115px;
+        object-fit: cover;
+    }
+    .grandecarte img{
+        height: 87%;
     }
     .footer div{
         margin-bottom: 20px;
         padding-left: 40px;
     }
-    
 }
 
 /*titre-card*/
@@ -348,9 +355,10 @@ nav a:hover{
 
 .hebergements-card h3, 
 .hebergements-card p,
-.popular-description p,
-.popular-description h3 {
+.popular-card p,
+.popular-card h3 {
     margin: 5px;
+    font-size: 17px;
 }
 .bleu{
     color: #0065fc;
@@ -388,13 +396,13 @@ nav a:hover{
     min-width: 150px;
 }
 
-.popular-description{
+.popular-card{
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.popular-description .stars{
+.popular-card .stars{
     margin-top: 40px;
 }
 
@@ -408,7 +416,7 @@ nav a:hover{
 
 .activites h2{
     font-size: 1.3em;
-    margin: 60px 0 30px 0;
+    margin: 60px 0 20px 0;
 }
 .blocactivites{
     display: flex;
@@ -417,6 +425,7 @@ nav a:hover{
 .premierblock, .deuxiemeblock{
     display: flex;
     justify-content: space-between;
+    margin-top: 25px;
 }
 
 .grandecarte, .medium1, .small1, .medium2, .small2{
@@ -432,32 +441,12 @@ nav a:hover{
     border-radius: 10px 10px 0 0;
     object-fit: cover;
 }
-.grandecarte img{
-    height: 87%;
-}
-.medium1 img{
-    height: 180px;
-    object-fit: cover;    
-}
-.small1 img{
-    height: 115px;
-    object-fit: cover;
-}
+
 .activites article h3{
     font-size: 1em;
     margin: 19px;
 }
 
-.small2 img{
-    height: 115px;
-    width: 100%;
-    object-fit: cover;
-}
-.medium2 img{
-    height: 180px;
-    width: 100%;
-    object-fit: cover;
-}
 .small2 h3, .medium2 h3{
     margin-top: 14px;
 }
@@ -494,6 +483,9 @@ nav a:hover{
         margin: 40px 90px 60px 40px;
         padding: 0;
     }
+    .blocactivites{
+        flex-direction: row;
+    }
     .premierblock, .deuxiemeblock{
         display: flex;
         justify-content: space-between;
@@ -514,41 +506,33 @@ nav a:hover{
         border-radius: 10px 10px 0 0;
         object-fit: cover;
     }
-    .grandecarte img{
-        height: 87%;
-    }
-    .medium1 img{
-        height: 180px;
-        object-fit: cover;    
-    }
-    .small1 img{
-        height: 115px;
-        object-fit: cover;
-    }
     .activites article h3{
-        font-size: 1em;
+        font-size: 17px;
         margin: 19px;
     }
-    
-    .small2 img{
-        height: 115px;
-        width: 100%;
-        object-fit: cover;
-    }
-    .medium2 img{
-        height: 180px;
-        width: 100%;
-        object-fit: cover;
+    .grandecarte img{
+        height: 87%;
     }
     .small2 h3, .medium2 h3{
         margin-top: 14px;
     }
-    
+    .medium1 img, .medium2 img{
+        height: 180px;
+        object-fit: cover;    
+    }
+    .small1 img, .small2 img{
+        height: 115px;
+        object-fit: cover;
+    }
 }
 
 @media (max-width:500px){
+.filter-list {
+    flex-direction: column;
+    align-items: flex-start;
+}    
 .activites{
-    height: 1870px;
+    height: auto;
     margin: 0px 20px 20px 40px;
 }    
 
@@ -557,14 +541,32 @@ nav a:hover{
     width:100%;
 }
 .grandecarte{
-    height: 442px;
+    height: auto;
     width: 100%;
+    margin-bottom: 35px;
 }
 .doublecarte{
-    height: 444px;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.medium1, .medium2, .small1, .small2{
+    margin-bottom: 35px;
+}
+.medium1 img, .medium2 img{
+    height: 150px;
+    object-fit: cover;    
+}
+.small1 img, .small2 img{
+    height: 150px;
+    object-fit: cover;
+}
+.grandecarte img{
+    height: 150px;
+}
+.footer{
+    flex-direction: column;
 }
 }
