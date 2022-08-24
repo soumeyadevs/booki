@@ -205,14 +205,24 @@ nav a:hover{
 
 /*liste hebergements*/
 
-.hebergements-list {
+.heb-pop{
     display: flex;
     gap: 50px;
-    margin: 0px 90px 0px 40px
 }
 
+.hebergements-list {
+    margin-left: 40px;
+    width: 65%;
+}
+.liste-populaire{
+    margin-right: 90px;
+}
 
-.hebergements-list div {
+.liste-populaire{
+    width: 34%;
+}
+
+.hebergements-list div, .liste-populaire div{
     border-radius: 10px;
     padding: 7px;
     position: relative;
@@ -220,18 +230,14 @@ nav a:hover{
 
 .hebergements-list .city{
     background-color: #F2F2F2;
-    flex-basis: 66%;
-    padding: 40px 30px 0px;
+    padding: 40px 30px 20px;
 }
-.hebergements-list .popular{
+.liste-populaire .popular{
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    border: 1px solid #F2F2F2;
     background-color: #F2F2F2;
-    flex-basis: 33%;
-    padding: 30px
+    padding: 24px 10px
 }
 
 .hebergements-list .city a{
@@ -268,7 +274,7 @@ nav a:hover{
     .message-info{
         margin: 30px 0px 30px 10px;
     }
-    .hebergements-list{
+    .heb-pop{
         flex-direction: column;
         width: 100%;
         margin: 0;
@@ -277,8 +283,13 @@ nav a:hover{
     .hebergements-list .city{
         background-color: white;
     }
-    .popular{
+    .hebergements-list{
+        width: 100%;
+        margin: 0px 20px 20px -16px;
+    }
+    .liste-populaire{
         order: -1;
+        width: 100%;
     }
     .activites{
         width: auto;
@@ -330,7 +341,7 @@ nav a:hover{
 .city-hebergements-marseille{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0 30px;
     justify-content: space-around;
     margin-bottom: 10px;
 }
@@ -358,7 +369,7 @@ nav a:hover{
 .popular-card p,
 .popular-card h3 {
     margin: 5px;
-    font-size: 17px;
+    font-size: 15px;
 }
 .bleu{
     color: #0065fc;
@@ -390,10 +401,10 @@ nav a:hover{
 
 .popular-list .popular-card img{
     border-radius: 10px 0px 0px 10px;
-    height: 150px;
-    width: 150px;
+    height: 145px;
+    width: 130px;
     object-fit: cover;
-    min-width: 150px;
+    min-width: 126px;
 }
 
 .popular-card{
@@ -402,15 +413,24 @@ nav a:hover{
     flex-direction: column;
 }
 
+.popular-card .stars1{
+    margin-top: 64px;
+}
 .popular-card .stars{
-    margin-top: 40px;
+    margin-top: 47px;
 }
 
+.popular-card a{
+    display: flex;
+}
 .popular .etoile-popular{
     float: right;
     position: absolute;
-    right: 20px;
+    right: 18px;
+    top: 33px;
+    font-size: 22px;
 }
+
 
 /*activité*/
 
@@ -523,6 +543,51 @@ nav a:hover{
     .small1 img, .small2 img{
         height: 115px;
         object-fit: cover;
+    }
+}
+
+@media (max-width:768px){
+    .filter-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }    
+    .activites{
+        height: auto;
+        margin: 0px 20px 20px 40px;
+    }    
+    
+    .premierblock, .deuxiemeblock{
+        flex-direction: row;
+        width:100%;
+    }
+    .grandecarte{
+        height: 442px;
+        width: 46%;
+        margin-bottom: 35px;
+    }
+    .doublecarte{
+        height: 444px;
+        width: 46%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .medium1, .medium2, .small1, .small2{
+        margin-bottom: 35px;
+    }
+    .medium1 img, .medium2 img{
+        height: 180px;
+        object-fit: cover;    
+    }
+    .small1 img, .small2 img{
+        height: 115px;
+        object-fit: cover;
+    }
+    .grandecarte img{
+        height: 87%;
+    }
+    .footer{
+        flex-direction: row;
     }
 }
 
